@@ -27,7 +27,7 @@ router.delete('/:id', async (req,res) => {
 })
 
 async function loadPostsCollection() {
-    const client = await mongodb.MongoClient.connect('mongodb+srv://ljs174:dZs7pRMLKV6592cQ@vuepr03.2kjvy6f.mongodb.net/');
+    const client = await mongodb.MongoClient.connect('mongodb://ljs174:dZs7pRMLKV6592cQ@vuepr03.2kjvy6f.mongodb.net/');
     //mongodb+srv://ljs174:<password>@vuepr03.2kjvy6f.mongodb.net/
     return client.db('vuepr03').collection('posts');
 }
