@@ -13,6 +13,7 @@ router.get('/', async (req,res)=>{
 router.post('/', async (req, res) => {
     const posts = await loadPostsCollection();
     await posts.insertOne({
+        name: req.body.name,
         text: req.body.text,
         createdAt: new Date()
     })
